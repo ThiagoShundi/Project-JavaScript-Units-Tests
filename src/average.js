@@ -14,19 +14,21 @@
 const average = (med) => {
   let soma = 0;
   let media = 0;
-
+  
+  if (med.length === 0) {
+    return undefined;
+  }
   for (let index = 0; index < med.length; index += 1) {
     if (typeof med[index] !== 'number') {
       return undefined;
     }
   }
-  if (med === []) {
-    return undefined;
-  } 
+
   for (let index2 = 0; index2 < med.length; index2 += 1) {
     soma += med[index2];
   }
-  media = soma / med.length;
+  media = Math.round(soma / med.length);
   return media;
 };
+
 module.exports = average;
