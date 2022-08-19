@@ -51,16 +51,16 @@ const calculator = (number1, number2) => {
 };
 
 const arrayGenerator = (type, object) => {
-//   if (type === 'keys') {
-//     return object.object;
-//   } 
-//   if (type === 'values') {
-//     return object.value;
-//   } if (type === 'entries') {
-//     return object;
-//   }
+  if (type === 'keys') {
+    return Object.keys(object);
+  } 
+  if (type === 'values') {
+    return Object.values(object);
+  } if (type === 'entries') {
+    return Object.entries(object);
+    }
 };
 
-// console.log('Keys', [sum: 4, mult: 3, div: 0, sub: -2])
+console.log(arrayGenerator('entries', { sum: 4, mult: 3, div: 0, sub: -2 }));
 
 module.exports = { calculator, arrayGenerator };
